@@ -17,6 +17,7 @@ public abstract class GameCharacter {
     }
 
     public void playSolo() {
+        System.out.println(getName() + " is performing a " + solo.getName());
         solo.perform();
     }
 
