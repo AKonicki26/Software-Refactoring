@@ -6,4 +6,9 @@ public class GuitarOnFire implements SoloAct {
     public void perform() {
         System.out.println("Woah the guitar is on fire now");
     }
+
+    @Override
+    public String getName() {
+        return "On Fire Guitar";
+    }
 }

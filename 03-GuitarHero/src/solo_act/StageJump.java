@@ -6,4 +6,9 @@ public class StageJump implements SoloAct {
     public void perform() {
         System.out.println("Stage Jump!! RAAAHHHHHHH");
     }
+
+    @Override
+    public String getName() {
+        return "Stage Jump";
+    }
 }

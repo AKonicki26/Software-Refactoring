@@ -6,4 +6,9 @@ public class GuitarSmash implements SoloAct {
     public void perform() {
         System.out.println("Guitar Smash!!! Bang!! Bang!! Boom!!");
     }
+
+    @Override
+    public String getName() {
+        return "Guitar Smash";
+    }
 }

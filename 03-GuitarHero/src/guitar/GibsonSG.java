@@ -11,4 +11,9 @@ public class GibsonSG implements Guitar {
     public void display() {
         System.out.println("This is a cool Gibson SG");
     }
+
+    @Override
+    public String getName() {
+        return "GibsonSG";
+    }
 }

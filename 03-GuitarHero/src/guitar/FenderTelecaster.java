@@ -11,4 +11,9 @@ public class FenderTelecaster implements Guitar {
     public void display() {
         System.out.println("This is a legendary Fender Telecaster");
     }
+
+    @Override
+    public String getName() {
+        return "Fender Telecaster";
+    }
 }

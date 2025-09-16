@@ -25,6 +25,7 @@ public abstract class GameCharacter {
     }
 
     public void playGuitar() {
+        System.out.println(getName() + " is playing a " + guitar.getName());
         guitar.play();
     }
 }

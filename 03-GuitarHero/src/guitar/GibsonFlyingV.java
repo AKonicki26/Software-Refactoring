@@ -11,4 +11,9 @@ public class GibsonFlyingV implements Guitar {
     public void display() {
         System.out.println("This is a rad Gibson Flying V");
     }
+
+    @Override
+    public String getName() {
+        return "Gibson Flying V";
+    }
 }
