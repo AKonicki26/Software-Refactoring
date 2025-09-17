@@ -7,21 +7,21 @@ import observer.TestObserver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestObservable implements Observable<TestObservable> {
+public class TestObservable implements Observable {
 
-    private List<Observer<TestObservable>> observers = new ArrayList<>();
+    private List<Observer> observers = new ArrayList<>();
     @Override
     public void notifyObservers() {
         observers.forEach(observer -> observer.update(this));
     }
 
     @Override
-    public void addObserver(Observer<TestObservable> o) {
+    public void addObserver(Observer o) {
         observers.add(o);
     }
 
     @Override
-    public void removeObserver(Observer<TestObservable> o) {
+    public void removeObserver(Observer o) {
         observers.remove(o);
     }
 }
