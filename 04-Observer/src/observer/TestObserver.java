@@ -1,12 +1,13 @@
 package observer;
 
-import observable.Observable;
+import observable.TestObservable;
 
-public class TestObserver implements Observer {
+public class TestObserver implements Observer<TestObservable> {
     @Override
-    public void update(Observable observable) {
+    public void update(TestObservable observable) {
 
     }
+
     @Override
     public void display() {
 

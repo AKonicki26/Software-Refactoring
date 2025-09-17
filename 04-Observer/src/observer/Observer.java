@@ -2,7 +2,7 @@ package observer;
 
 import observable.Observable;
 
-public interface Observer {
-    public void update(Observable observable);
+public interface Observer<T extends Observable<T>> {
+    public void update(T observable);
     public void display();
 }
