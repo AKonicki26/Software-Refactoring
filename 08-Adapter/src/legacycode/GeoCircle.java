@@ -1,4 +1,5 @@
-
+//Author: Murat Gungor
+package legacycode;
 public class GeoCircle implements GeometryDraw {
 	@Override
 	public void draw(Point p1, Point p2) {

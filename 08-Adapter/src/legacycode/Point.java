@@ -1,4 +1,5 @@
-
+//Author: Murat Gungor
+package legacycode;
 public class Point {
 	public int x;
 	public int y;
