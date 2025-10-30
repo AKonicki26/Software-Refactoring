@@ -1,5 +1,9 @@
 package icecream;
 
+import icecream.dairyqueen.Chocolate;
+import icecream.dairyqueen.Strawberry;
+import icecream.dairyqueen.Vanilla;
+
 /**
  * A factory that makes ice cream.
  */

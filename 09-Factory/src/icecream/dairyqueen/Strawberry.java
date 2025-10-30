@@ -1,4 +1,6 @@
-package icecream;
+package icecream.dairyqueen;
+
+import icecream.IceCream;
 
 // a concrete instance of an ice cream
 public class Strawberry extends IceCream {
