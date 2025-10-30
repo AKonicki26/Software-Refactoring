@@ -1,4 +1,4 @@
-package legacy;
+package sorting;
 
 /**
  * An interface for a sorting algorithm.

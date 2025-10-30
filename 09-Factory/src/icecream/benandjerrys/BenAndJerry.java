@@ -1,4 +1,7 @@
-package legacy;
+package icecream.benandjerrys;
+
+import icecream.IceCream;
+import icecream.IceCreamShop;
 
 /**
  * An implementation of IceCreamShop

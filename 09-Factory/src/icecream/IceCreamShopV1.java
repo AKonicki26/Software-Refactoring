@@ -1,4 +1,4 @@
-package legacy;
+package icecream;
 
 /**
  * Demonstration of the Factory pattern

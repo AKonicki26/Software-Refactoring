@@ -1,4 +1,4 @@
-package legacy;
+package icecream;
 
 /**
  * A factory that makes ice cream.

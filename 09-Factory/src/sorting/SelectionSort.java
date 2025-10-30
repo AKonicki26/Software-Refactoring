@@ -1,4 +1,4 @@
-package legacy;
+package sorting;
 
 /**
  * An implementation of the selection sort algorithm.

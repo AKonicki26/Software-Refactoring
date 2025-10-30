@@ -1,4 +1,4 @@
-package legacy;
+package icecream;
 
 /**
  * This is the abstract class forming the basis of our factory.

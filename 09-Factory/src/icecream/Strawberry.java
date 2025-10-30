@@ -1,4 +1,4 @@
-package legacy;
+package icecream;
 
 // a concrete instance of an ice cream
 public class Strawberry extends IceCream {

@@ -1,4 +1,4 @@
-package legacy;
+package sorting;
 
 /**
  * A factory for sorting algorithms.

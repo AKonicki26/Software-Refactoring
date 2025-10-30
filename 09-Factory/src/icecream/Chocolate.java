@@ -1,4 +1,4 @@
-package legacy;// a concrete instance of ice cream
+package icecream;// a concrete instance of ice cream
 
 public class Chocolate extends IceCream {
 	public static final double COST = 1.09;

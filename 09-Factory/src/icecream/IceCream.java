@@ -1,4 +1,4 @@
-package legacy;
+package icecream;
 
 /**
  * This acts as the product the factory constructs.

@@ -1,3 +1,4 @@
+import sorting.*;
 
 public class TestSorter {
 
