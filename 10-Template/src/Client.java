@@ -3,9 +3,9 @@
  * this is the driver program
  */
 
-import codebefore.DinersCard;
-import codebefore.MasterCard;
-import codebefore.VisaCard;
+import creditcard.DinersCard;
+import creditcard.MasterCard;
+import creditcard.VisaCard;
 
 public class Client {
     public static void main(String[] args) {
