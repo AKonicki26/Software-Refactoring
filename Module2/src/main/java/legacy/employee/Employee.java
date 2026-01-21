@@ -1,4 +1,4 @@
-package org.legacy.employee;
+package legacy.employee;
 
 import java.time.*;
 

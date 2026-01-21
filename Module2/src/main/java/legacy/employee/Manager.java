@@ -1,4 +1,4 @@
-package org.legacy.employee;
+package legacy.employee;
 
 public class Manager extends Employee {
     private double bonus;
