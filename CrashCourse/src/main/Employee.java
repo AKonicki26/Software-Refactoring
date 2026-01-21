@@ -2,12 +2,11 @@ package main;
 
 import java.time.LocalDate;
 
-public class Employee {
-    private String name;
+public class Employee extends Person {
     private double salary;
     private LocalDate hireDate;
 
-    Employee(String name, double salary, int hireYear, int hireMonth, int hireDay) {
+    public Employee(String name, double salary, int hireYear, int hireMonth, int hireDay) {
         this.name = name;
         this.salary = salary;
         this.hireDate = LocalDate.of(hireYear, hireMonth, hireDay);
@@ -18,6 +17,11 @@ public class Employee {
     }
 
     public void raiseSalaryBy(double percentRaise) {
-        salary += salary * (percentRaise / 100);
+        salary += getSalary() * (percentRaise / 100);
+    }
+
+    @Override
+    public String getDescription() {
+        return "I am an employee, " + name + " my salary is " + getSalary();
     }
 }
