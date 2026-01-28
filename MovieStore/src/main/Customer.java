@@ -1,3 +1,5 @@
+package main;
+
 import java.util.* ;
 
 class Customer {
@@ -21,7 +23,7 @@ class Customer {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration rentals = _rentals.elements();
-        String result = "Rental Record for " + getName() + "\n";
+        String result = "main.Rental Record for " + getName() + "\n";
         while (rentals.hasMoreElements()) {
             double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();
