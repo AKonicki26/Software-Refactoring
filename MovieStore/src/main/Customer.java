@@ -1,78 +1,54 @@
 package main;
 
-import java.util.* ;
+import main.statement.HTMLStatement;
+import main.statement.TextStatement;
+
+import javax.swing.text.html.HTML;
+import java.util.*;
 
 public class Customer {
 
-    private String _name;
-    private Vector _rentals = new Vector();
+	private String _name;
+	private ArrayList<Rental> _rentals = new ArrayList<Rental>();
 
-    public Customer(String name) {
-       _name = name;
-    }
+	public Customer(String name) {
+		_name = name;
+	}
 
-    public void addRental(Rental arg) {
-       _rentals.addElement(arg);
-    }
+	public void addRental(Rental arg) {
+		_rentals.add(arg);
+	}
+	public List<Rental> getRentals() { return _rentals; }
 
-    public String getName() {
-       return _name;
-    }
+	public String getName() {
+		return _name;
+	}
 
-    public String statement() {
-        double totalAmount = 0;
-        int frequentRenterPoints = 0;
-        Enumeration rentals = _rentals.elements();
-        String result = "main.Rental Record for " + getName() + "\n";
-        while (rentals.hasMoreElements()) {
-            Rental rental = (Rental) rentals.nextElement();
+	public int getTotalFrequentRenterPoints() {
+		int totalFrequentRenterPoints = 0;
 
-            double rentalPrice = rental.getPrice();
+		for (Rental rental : _rentals) {
+			// add frequent renter points
+			totalFrequentRenterPoints += rental.getFrequentRenterPoints();
+		}
+		return totalFrequentRenterPoints;
+	}
 
-            // add frequent renter points
-            frequentRenterPoints ++;
-            // add bonus for a two day new release rental
-            if ((rental.getMovie().getPriceCode() == Movie.NEW_RELEASE) &&
-               rental.getDaysRented() > 1) frequentRenterPoints ++;
+	public double getTotalCharge() {
+		double totalAmount = 0;
 
-            //show figures for this rental
-            result += "\t" + rental.getMovie().getTitle()+ "\t" +
-               String.valueOf(rentalPrice) + "\n";
+		for (Rental rental : _rentals) {
+			totalAmount += rental.getPrice();
+		}
 
-            totalAmount += rentalPrice;
+		return totalAmount;
+	}
 
-        }
-        //add footer lines
-        result +=  "Amount owed is " + String.valueOf(totalAmount) + "\n";
-        result += "You earned " + String.valueOf(frequentRenterPoints) +
-                    " frequent renter points";
-        return result;
-
-    }
-
-    private double getRentalPrice(Rental rental) {
-        double price = 0;
-
-        //determine amounts for each line
-        switch (rental.getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                price += 2;
-                if (rental.getDaysRented() > 2)
-                    price += (rental.getDaysRented() - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                price += rental.getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                price += 1.5;
-                if (rental.getDaysRented() > 3)
-                    price += (rental.getDaysRented() - 3) * 1.5;
-                break;
-
-        }
-
-        return price;
-    }
+	public String statement() {
+		return (new TextStatement(this)).getStatement();
+	}
+	
+	public String htmlStatement() {
+		return (new HTMLStatement(this)).getStatement();
+	}
 }
-
-
