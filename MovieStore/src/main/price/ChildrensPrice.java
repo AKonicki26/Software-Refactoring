@@ -1,6 +1,5 @@
+// Astrid Konicki
 package main.price;
-
-import main.Movie;
 
 public class ChildrensPrice extends Price {
 

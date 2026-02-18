@@ -1,3 +1,4 @@
+// Astrid Konicki
 package main.price;
 
 abstract public class Price {

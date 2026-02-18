@@ -7,6 +7,7 @@ import main.Rental;
 import main.price.ChildrensPrice;
 import main.price.NewReleasePrice;
 import main.price.RegularPrice;
+import main.statement.HTMLStatement;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -32,7 +33,7 @@ public class RentalTest {
                 Amount owed is 8.0
                 You earned 2 frequent renter points""";
 
-        assertEquals(bob.statement(), bobOutput);
+        assertEquals(bob.getStatementString(), bobOutput);
     }
 
     @Test
@@ -55,7 +56,7 @@ public class RentalTest {
         You earned 3 frequent renter points""";
 
 
-        assertEquals(bob.statement(), bobOutput);
+        assertEquals(bob.getStatementString(), bobOutput);
     }
 
     @Test
@@ -80,7 +81,8 @@ public class RentalTest {
         cust1.addRental(ren2);
 
         // System.out.println("\n" + cust1.statement() + "\n");
-        String actual = cust1.htmlStatement();
+        cust1.setStatement(new HTMLStatement(cust1));
+        String actual = cust1.getStatementString();
         String expected = "<h1>Rental Record for bob</h1>\n"
                 + "	dumbo	1.5<br>\n"
                 + "	jaws	6.5<br>\n"
@@ -113,7 +115,8 @@ public class RentalTest {
 
         //System.out.println("\n" + cust2.statement() + "\n");
 
-        String actual = cust2.htmlStatement();
+        cust2.setStatement(new HTMLStatement(cust2));
+        String actual = cust2.getStatementString();
         String expected = "<h1>Rental Record for ann</h1>\n"
                 + "	ghost	3.0<br>\n"
                 + "	ghost	9.0<br>\n"

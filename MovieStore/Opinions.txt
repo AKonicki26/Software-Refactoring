@@ -1,0 +1,12 @@
+I didn't mind this refactor at all.
+I think it was a fairly good refactor, although I am generally not a fan of the way
+the statement class is used within customer.
+
+Since we need to pass the customer into the statement, the UML for the customer looks cumbersome.
+The Customer owns a Statement, but then the Statement needs to then own the same Customer?
+It would make for more sense for statements to exist in isolation.
+
+The Statement shouldn't be owned by anything, and the Statement owns the customer that the statement is about.
+That would remove the cumbersomeness around setting a statement, and then also separate the concerns a bit,
+making the Statement class act more like a service class,
+rather than a thing that is directly associated with the Customer's data.
