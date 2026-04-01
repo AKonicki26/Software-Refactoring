@@ -5,11 +5,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import main.MusicPlayer;
+import main.VideoPlayer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import main.Player;
+import main.*;
 
 class PlayerTest {
 
@@ -27,8 +29,7 @@ class PlayerTest {
 
     @Test
     void testPlayMp3MusicFile() {
-        Player musicPlayer = new Player("I will survive");
-        musicPlayer.setFileFormatToMp3(true);
+        MusicPlayer musicPlayer = new MusicPlayer("I will survive");
 
         musicPlayer.play();
         musicPlayer.loop();
@@ -43,8 +44,7 @@ class PlayerTest {
 
     @Test
     void testPlayVideoFile() {
-        Player videoPlayer = new Player("Till the end");
-        videoPlayer.setFileFormatToMp3(true);
+        VideoPlayer videoPlayer = new VideoPlayer("Till the end");
 
         videoPlayer.play();
         videoPlayer.loop();
